@@ -29,9 +29,9 @@
 
 #include "RestFrames/RestFrames.hh"
 
-#include "Detector.hh"
-#include "Physics.hh"
-#include "Resolution.hh"
+#include "../include/Detector.hh"
+#include "../include/Physics.hh"
+#include "../include/Resolution.hh"
 #include <TSystem.h>
 
 using namespace RestFrames;
@@ -306,7 +306,7 @@ void Vertex_LLP_Detector_X2X2_to_ZllXZllX(std::string output_name =
     
     //since there is a correlation between MET and the PT/Eta of the CM frame
     //from 200-1000 GeV (in 100 GeV steps) the correlation depending on the X2 mass
-    TFile* input = new TFile("PTEta.root");
+    TFile* input = new TFile("root/PTEta.root");
     //string PTEta_histname = "hist_PTvsEta_1000";
     
     string PTEta_histname = "hist_PTvsEta_";
